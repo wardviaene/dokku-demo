@@ -29,3 +29,7 @@ resource "digitalocean_droplet" "dokku-demo" {
       }
     }
 }
+
+output "output-dokku-demo-1" {
+  value = "IP: ${digitalocean_droplet.dokku-demo.ipv4_address}"
+}
